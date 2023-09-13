@@ -1,36 +1,36 @@
 #include<stdio.h>
 #include<stdlib.h>
+#include<string.h>
+
 void main ()
 {char *prenom ,*nom, sexe;
     prenom = malloc(sizeof(char) * 50);
     nom = malloc(sizeof(char) * 50);
-int age,tel;
+    int age;
+    char numeroTelephone[15];
 
+    // Saisie des informations personnelles
+    printf("Entrez votre nom : ");
+    scanf("%s", nom);
 
-printf("Entrer votre prenom:");
-scanf("%s",prenom);
+    printf("Entrez votre prenom : ");
+    scanf("%s", prenom);
 
-printf("Entrer votre nom:");
-scanf("%s",nom);
+    printf("Entrez votre age : ");
+    scanf("%d", &age);
 
-printf("Entrer votre sexe F:(feminin) / M:(Masculin)");
-scanf("%c",sexe);
+    printf("Entrez votre sexe (M/F) : ");
+    scanf(" %c", &sexe);
 
-printf("Entrer votre age:");
-scanf("%d",&age);
+    printf("Entrez votre numero de telephone : ");
+    scanf("%s", numeroTelephone);
 
-printf("Entrer votre numero de telephone:");
-scanf("%d",&tel);
-
-
-
-
-printf("Informations personnelles:\n");
-printf("Prenom:%s\n",prenom);
-printf("nom:%s\n",nom);
-printf("CIN:%c\n",sexe);
-printf("Age:%d\n",age);
-printf("Age:%d\n",tel);
-
+    // Affichage des informations personnelles
+    printf("\nInformations personnelles :\n");
+    printf("Nom : %s\n", nom);
+    printf("Prenom : %s\n", prenom);
+    printf("Age : %d ans\n", age);
+    printf("Sexe : %c\n", sexe);
+    printf("Numero de telephone : %s\n", numeroTelephone);
 
 }
